@@ -23,28 +23,31 @@
     <title>Frontend Mentor | News homepage</title>
   </head>
   <body>
-    <header class="header">
-      <img class="logo" alt="w. logo" src="./assets/images/logo.svg" />
-      <nav class="nav-container">
+    <header class="header margin-bb">
+      <div class="logo-box flex">
+        <img class="logo" alt="w. logo" src="./assets/images/logo.svg" />
+      </div>
+      <nav class="nav flex">
         <ul class="nav-container">
-          <li>Home</li>
-          <li>New</li>
-          <li>Popular</li>
-          <li>Trending</li>
-          <li>Categories</li>
+          <li class="nav-btn">Home</li>
+          <li class="nav-btn">New</li>
+          <li class="nav-btn">Popular</li>
+          <li class="nav-btn">Trending</li>
+          <li class="nav-btn">Categories</li>
         </ul>
       </nav>
     </header>
     <!-- ------------------------------------------- -->
     <main class="main-container">
-      <div class="container">
+      <div class="container margin-bb">
+        <!--hero----------- -->
         <section class="hero">
           <img
             src="./assets/images/image-web-3-desktop.jpg"
             alt="image with paterns"
             class="hero__image"
           />
-          <div>
+          <div class="hero__title-container">
             <h1 class="hero__title">The Bright Future of Web 3.0?</h1>
             <div class="hero__desc-box">
               <p class="hero__desc-text">
