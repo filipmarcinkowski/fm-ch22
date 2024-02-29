@@ -34,7 +34,7 @@ body {
 
   max-width: 123rem;
   margin: 0 auto;
-  padding: 6rem;
+  padding: 6rem 2rem;
 }
 
 .header {
@@ -59,13 +59,17 @@ body {
 
 .nav-container {
   display: flex;
+
+  justify-content: end;
   gap: 4.8rem;
+
+  background-color: red;
 }
 
 .nav-btn {
   color: var(--clr-neutral-100);
   list-style: none;
-  transition: color 0.3s;
+  transition: color 0.2s;
   cursor: pointer;
 }
 
@@ -75,11 +79,12 @@ body {
 
 /***** HERO *******/
 
-/* .container {
+.container,
+.topic__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-} */
+  gap: var(--gap);
+}
 
 .hero {
   grid-column: 1/3;
@@ -101,7 +106,7 @@ body {
   display: grid;
 }
 
-h1 {
+.hero__title {
   font-size: 5.5rem;
   line-height: 1;
 }
@@ -118,6 +123,12 @@ h1 {
   letter-spacing: 0.5rem;
   justify-self: start;
   align-self: end;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.hero__desc-btn:hover {
+  background-color: var(--clr-neutral-100);
 }
 
 /***** NEWSBAR *******/
@@ -127,7 +138,7 @@ h1 {
   display: grid;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 2.5rem;
 }
 
 h3 {
@@ -136,17 +147,33 @@ h3 {
 }
 
 .newsbar__news-box {
+  padding-top: 2rem;
+}
+
+.newsbar__news-box:not(:last-child) {
+  padding-bottom: 2rem;
+  border-bottom: 0.1rem solid var(--clr-neutral-400);
+}
+
+.newsbar__news-title {
   color: var(--clr-neutral-900);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.newsbar__news-title:hover {
+  color: var(--clr-primary);
+}
+
+.newsbar__news-desc {
+  color: var(--clr-neutral-400);
+  line-height: 1.8;
 }
 
 /***** TOPICS *****/
-.container,
-.topics,
-.topic__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--gap);
-}
 
 .topic__container {
   gap: 2rem;
@@ -173,6 +200,12 @@ h3 {
   font-weight: 800;
   color: var(--clr-neutral-100);
   margin-bottom: 1rem;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.topic__desc-title:hover {
+  color: var(--clr-secondary);
 }
 
 .topic__desc-text {
