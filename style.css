@@ -5,6 +5,7 @@
   --clr-neutral-900: hsl(36, 100%, 99%);
   --clr-neutral-700: hsl(233, 8%, 79%);
   --clr-neutral-400: hsl(236, 13%, 42%);
+  --clr-neutral-400p: hsla(236, 13%, 42%, 0.219);
   --clr-neutral-100: hsl(240, 100%, 5%);
 
   /*  boreder */
@@ -38,8 +39,11 @@ body {
 }
 
 .header {
+  position: relative;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 /***** GENERAL USE ******/
 .flex {
@@ -59,22 +63,50 @@ body {
 
 .nav-container {
   display: flex;
-
   justify-content: end;
   gap: 4.8rem;
-
-  background-color: red;
 }
 
-.nav-btn {
+.nav-link {
   color: var(--clr-neutral-100);
   list-style: none;
   transition: color 0.2s;
   cursor: pointer;
 }
 
-.nav-btn:hover {
+.nav-link:hover {
   color: var(--clr-secondary);
+}
+
+/* MENU ICON*/
+
+.menu-box {
+  z-index: 1000;
+  border: none;
+  background-color: transparent;
+  position: fixed;
+  right: 3rem;
+}
+
+.menu-icon {
+  display: block;
+  width: 5rem;
+  height: auto;
+}
+
+.bg-transparency {
+  background-color: var(--clr-neutral-400p);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  transition: left 0.4s;
+}
+
+.bg {
+  left: -100%;
 }
 
 /***** HERO *******/
@@ -211,4 +243,10 @@ h3 {
 .topic__desc-text {
   color: var(--clr-neutral-400);
   line-height: 1.6;
+}
+
+/* HIDDEN */
+
+.hidden {
+  display: none;
 }
