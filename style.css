@@ -11,10 +11,6 @@
   /*  boreder */
 
   --gap: 3.4rem;
-
-  --border-1: 0.3rem solid red;
-  --border-2: 0.3rem solid blue;
-  --border-3: 0.3rem solid yellow;
 }
 
 * {
