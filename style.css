@@ -36,10 +36,11 @@ body {
   max-width: 123rem;
   margin: 0 auto;
   padding: 6rem 2rem;
+  height: 100vh;
 }
 
 .header {
-  position: relative;
+  /* position: fixed; */
   z-index: 100;
   display: flex;
   justify-content: space-between;
@@ -84,8 +85,9 @@ body {
   z-index: 1000;
   border: none;
   background-color: transparent;
-  position: fixed;
+  /* position: fixed; */
   right: 3rem;
+  cursor: pointer;
 }
 
 .menu-icon {
