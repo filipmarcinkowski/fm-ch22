@@ -4,6 +4,7 @@ const navList = document.querySelector('.nav');
 const blurBg = document.querySelector('.bg-transparency');
 const menuBox = document.querySelector('.menu-box');
 const menuIcon = document.querySelector('.menu-icon');
+const openMenu = navList.classList.contains('nav-open');
 
 const resolution = function () {
   if (window.innerWidth <= 544) {
@@ -25,6 +26,12 @@ const showMenu = function () {
   menuIcon.src = `./assets/images/icon-${
     navList.classList.contains('nav-open') ? 'menu-close' : 'menu'
   }.svg`;
+
+  if (navList.classList.contains('nav-open')) {
+    menuBox.classList.add('position');
+  } else {
+    menuBox.classList.remove('position');
+  }
 };
 
 menuBox.addEventListener('click', showMenu);

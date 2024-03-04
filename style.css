@@ -90,6 +90,7 @@ body {
   display: block;
   width: 5rem;
   height: auto;
+  /* position: fixed; */
 }
 
 .bg-transparency {
@@ -247,4 +248,8 @@ h3 {
 
 .hidden {
   display: none;
+}
+
+.position {
+  position: fixed;
 }
